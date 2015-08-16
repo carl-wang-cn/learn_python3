@@ -24,3 +24,7 @@ while n <= 100:
     sum = sum + n
     n = n + 1
 print("while 形式 计算0-100的和, 结果为:", sum)
+
+
+
+# 在07_dict.py中有几种遍历一个dict的方法
