@@ -39,11 +39,11 @@ print("'carl' is in dict d?", is_in)
 # 使用get方法来访问， key不存在时不会报错， 会返回none
 print("get 'nobody' from d:", d.get('nobody'))
 
-# update key's value
+# 更新key的值
 d['carl'] = 39
 print('now "carl" is:', d['carl'])
 
-# several ways to traverse a dict
+# 遍历dict的几种方法
 for i in d:
     print('dict[%s] =' % i, d[i])
 
@@ -53,16 +53,30 @@ for (k, v) in d.items():
 for k, v in zip(d.keys(), d.values()):
     print('dict[%s] =' % k, v)
 
+# 遍历dict中的值
+for v in d.values():
+    print('v:', v)
+
 # this is only supported in python2
 # removed in python3
 # for k,v in d.iteritems():
     # print('dict[%s] =' % k, v)
 
-# delete key
+# 删除key
 pop_element = d.pop('carl')
 print(pop_element)
 
 print("after pop out", pop_element, ', now d is:')
 for (k, v) in d.items():
     print('dict[%s] =' % k, v)
+
+
+
+# 判断一个对象是否可迭代
+from collections import Iterable
+
+print("\n判断一个对象是否可迭代")
+print("is str  iterable?", isinstance('abs', Iterable))
+print("is list iterable?", isinstance([1, 2, 3], Iterable))
+print("is int  iterable?", isinstance(123, Iterable))
 
