@@ -59,7 +59,7 @@ print("===================")
 def fib_generator(max):
     n, a, b = 0, 0, 1
     while n < max:
-        yield b
+        yield b       # 改了这一行
         a, b = b, a+b
         n = n + 1
     return 'done'
